@@ -29,10 +29,14 @@ namespace DataAccessLayer.Repository
             c.Add(t);
         }
 
-        public void Updater(T t)
+        public void Update(T t)
         {
             using var c = new Context();
             c.Update(t);
+        }
+
+        public interface IAboutDal
+        {
         }
     }
 }

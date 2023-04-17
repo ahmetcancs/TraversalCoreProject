@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-    internal interface IGenericDal
+    public interface IGenericDal<T> 
     {
+        void Insert(T t);
+        void Delete(T t);
+        void Update(T t);
+        List<T> GetList();
     }
 }
