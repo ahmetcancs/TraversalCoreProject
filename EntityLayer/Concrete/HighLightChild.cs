@@ -10,7 +10,7 @@ namespace EntityLayer.Concrete
     public class HighlightChild
     {
         [Key] //ID to be primary key
-        public int HighligChildtId { get; set; }
+        public int HighligChildId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }

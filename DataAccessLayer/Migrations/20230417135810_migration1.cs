@@ -2,7 +2,7 @@
 
 namespace DataAccessLayer.Migrations
 {
-    public partial class mig1 : Migration
+    public partial class migration1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -66,6 +66,7 @@ namespace DataAccessLayer.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     City = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Time = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Price = table.Column<double>(type: "float", nullable: false),
                     Image = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Capacity = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -97,7 +98,7 @@ namespace DataAccessLayer.Migrations
                 name: "HighlightChilds",
                 columns: table => new
                 {
-                    HighligChildtId = table.Column<int>(type: "int", nullable: false)
+                    HighligChildId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -106,7 +107,7 @@ namespace DataAccessLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_HighlightChilds", x => x.HighligChildtId);
+                    table.PrimaryKey("PK_HighlightChilds", x => x.HighligChildId);
                 });
 
             migrationBuilder.CreateTable(

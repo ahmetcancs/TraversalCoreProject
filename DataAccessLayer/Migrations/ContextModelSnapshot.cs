@@ -121,6 +121,9 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
@@ -185,7 +188,7 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.HighlightChild", b =>
                 {
-                    b.Property<int>("HighligChildtId")
+                    b.Property<int>("HighligChildId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -202,7 +205,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("HighligChildtId");
+                    b.HasKey("HighligChildId");
 
                     b.ToTable("HighlightChilds");
                 });
