@@ -1,16 +1,17 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace TraversalCoreProject.ViewComponents.Default
 {
-    public class PopularDestinations : ViewComponent
+    public class Highlights : ViewComponent
     {
-        DestinationManager destinationManager = new DestinationManager(new EfDestinationDal());
+        HighlightManager highlightManager = new HighlightManager (new EfHighlightDal());
         public IViewComponentResult Invoke()
         {
-            var values = destinationManager.TGetList();
+            var values = highlightManager.TGetList().Take(5).ToList(); ;
+            
             return View(values);
         }
     }

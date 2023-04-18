@@ -180,36 +180,15 @@ namespace DataAccessLayer.Migrations
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsImageBig")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("HighligtId");
 
                     b.ToTable("Highlights");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.HighlightChild", b =>
-                {
-                    b.Property<int>("HighligChildId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("HighligChildId");
-
-                    b.ToTable("HighlightChilds");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Newsletter", b =>

@@ -95,22 +95,6 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "HighlightChilds",
-                columns: table => new
-                {
-                    HighligChildId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Image = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Status = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_HighlightChilds", x => x.HighligChildId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Highlights",
                 columns: table => new
                 {
@@ -119,7 +103,8 @@ namespace DataAccessLayer.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Image = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Status = table.Column<bool>(type: "bit", nullable: false)
+                    Status = table.Column<bool>(type: "bit", nullable: false),
+                    IsImageBig = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -186,9 +171,6 @@ namespace DataAccessLayer.Migrations
 
             migrationBuilder.DropTable(
                 name: "Guides");
-
-            migrationBuilder.DropTable(
-                name: "HighlightChilds");
 
             migrationBuilder.DropTable(
                 name: "Highlights");
