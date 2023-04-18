@@ -22,7 +22,6 @@ namespace DataAccessLayer.Concrete
         public DbSet<Destination> Destinations { get; set; }
         public DbSet<Guide> Guides { get; set; }
         public DbSet<Highlight> Highlights { get; set; } //feature
-        public DbSet<HighlightChild> HighlightChilds { get; set; } //feature2
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<SubAbout> SubAbouts { get; set; }
         public DbSet<Newsletter> Newsletters { get; set; }

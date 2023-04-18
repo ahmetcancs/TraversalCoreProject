@@ -144,9 +144,9 @@ namespace DataAccessLayer.Migrations
                 {
                     TestimonialID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Client = table.Column<int>(type: "int", nullable: false),
-                    Comment = table.Column<int>(type: "int", nullable: false),
-                    Image = table.Column<int>(type: "int", nullable: false),
+                    Client = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Status = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>

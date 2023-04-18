@@ -11,9 +11,9 @@ namespace EntityLayer.Concrete
     {
         [Key] //ID to be primary key
         public int TestimonialID { get; set; }
-        public int Client { get; set; }
-        public int Comment   { get; set; }
-        public int Image { get; set; }
+        public string Client { get; set; }
+        public string Comment   { get; set; }
+        public string Image { get; set; }
         public bool Status { get; set; }
     }
 }
