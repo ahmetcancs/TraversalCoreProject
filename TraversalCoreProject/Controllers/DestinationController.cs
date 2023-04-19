@@ -13,10 +13,12 @@ namespace TraversalCoreProject.Controllers
             var values = destinationManager.TGetList();
             return View(values);
         }
-        [HttpGet]
+        [HttpGet]   //Blog Id req is coming here
         public IActionResult DestinationDetails(int Id) //blogsingle
         {
-            return View();
+            ViewBag.Id = Id;
+            var values = destinationManager.TGetByID(Id);
+            return View(values);
         }
         [HttpPost]
         public IActionResult DestinationDetails(Destination p)

@@ -12,15 +12,16 @@ namespace EntityLayer.Concrete
         [Key] //ID to be primary key
         public int DestinationID { get; set; }
         public string City { get; set; }
-        public string Time { get; set; }//how many stays there
+        public string Time { get; set; }
         public double Price { get; set; } 
         public string Image { get; set; }
         public string Description { get; set; }
-        public string Capacity { get; set; }//How many person
-        public bool Status { get; set; } //Is holiday active?
+        public string Capacity { get; set; }
+        public bool Status { get; set; } 
         public string CoverImage { get; set; }
         public string DetailsTop { get; set; }
         public string DetailsLower { get; set; }
         public string Image2 { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }
