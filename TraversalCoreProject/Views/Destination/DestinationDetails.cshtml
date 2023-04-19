@@ -20,12 +20,6 @@
 </head>
 
 <body>
-    <h1>test</h1>
-    <form method="get">
-        @Html.TextBoxFor(x => x.City)
-        <br />
-        @Html.TextBoxFor(x => x.Capacity)
-    </form>
     <section class="w3l-about-breadcrumb text-left">
         <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
             <div class="container">
@@ -204,7 +198,7 @@
                     </div>
                     <!--//author-card-->
                     @await Component.InvokeAsync("CommentList", new { id = ViewBag.Id })
-                    @await Component.InvokeAsync("AddComment")
+                    @await Html.PartialAsync("~/Views/Comment/AddComment.cshtml")
 
 
                 </div>
