@@ -18,5 +18,9 @@ namespace EntityLayer.Concrete
         public string Description { get; set; }
         public string Capacity { get; set; }//How many person
         public bool Status { get; set; } //Is holiday active?
+        public string CoverImage { get; set; }
+        public string DetailsTop { get; set; }
+        public string DetailsLower { get; set; }
+        public string Image2 { get; set; }
     }
 }
