@@ -57,7 +57,7 @@ namespace TraversalCoreProject.Controllers
 		[HttpGet]
         public IActionResult SignIn()
         {
-            return View();
+			return View();
         }
 
         [HttpPost]

@@ -5,23 +5,42 @@
 }
 
 <h1>Profil Düzenleme Sayfası</h1>
-<form method="post">
-    @Html.Label("Adınız")
-    <input type="text" asp-for="Name" class="form-control" />
-    <br />
-    @Html.Label("Soyadınız")
-    <input type="text" asp-for="Surname" class="form-control" />
-    <br />
-    @Html.Label("Mail")
-    <input type="text" asp-for="Mail" class="form-control" />
-    <br />
-    @Html.Label("Telefon Numarası")
-    <input type="text" asp-for="PhoneNumber" class="form-control" />
-    <br />
-    @Html.Label("Şifre")
-    <input type="text" asp-for="Password" class="form-control" />
-    <br />
-    @Html.Label("Şifre Tekrar")
-    <input type="text" asp-for="ConfirmPassword" class="form-control" />
-    <br />
+
+<form method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="Name" class="form-label">Adınız</label>
+        <input type="text" id="Name" name="Name" class="form-control" asp-for="Name" />
+    </div>
+
+    <div class="mb-3">
+        <label for="Surname" class="form-label">Soyadınız</label>
+        <input type="text" id="Surname" name="Surname" class="form-control" asp-for="Surname" />
+    </div>
+
+    <div class="mb-3">
+        <label for="Mail" class="form-label">Mail</label>
+        <input type="text" id="Mail" name="Mail" class="form-control" asp-for="Mail" />
+    </div>
+
+    <div class="mb-3">
+        <label for="PhoneNumber" class="form-label">Telefon Numarası</label>
+        <input type="text" id="PhoneNumber" name="PhoneNumber" class="form-control" asp-for="PhoneNumber" />
+    </div>
+
+    <div class="mb-3">
+        <label for="Password" class="form-label">Şifre</label>
+        <input type="password" id="Password" name="Password" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label for="ConfirmPassword" class="form-label">Şifre Tekrar</label>
+        <input type="password" id="ConfirmPassword" name="ConfirmPassword" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label for="Image" class="form-label">Resim Seçin</label>
+        <input type="file" id="Image" name="Image" class="form-control-file" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Bilgileri Güncelle</button>
 </form>
