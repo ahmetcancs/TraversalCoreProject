@@ -34,6 +34,11 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+        public List<Reservation> GetListApprovalReservation(int id)
+        {
+            return reservationDal.GetListByFilter(x => x.AppUserId == id);
+        }
+
         public List<Reservation> GetListByFilter(Expression<Func<Reservation, bool>> filter)
         {
             throw new NotImplementedException();
