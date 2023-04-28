@@ -34,14 +34,25 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public List<Reservation> GetListApprovalReservation(int id)
-        {
-            return reservationDal.GetListByFilter(x => x.AppUserId == id);
-        }
 
         public List<Reservation> GetListByFilter(Expression<Func<Reservation, bool>> filter)
         {
             throw new NotImplementedException();
+        }
+
+        public List<Reservation> GetListWithReservationByAccepted(int id)
+        {
+            return reservationDal.GetListWithReservationByAccepted(id);
+        }
+
+        public List<Reservation> GetListWithReservationByPrevious(int id)
+        {
+            return reservationDal.GetListWithReservationByPrevious(id);
+        }
+
+        public List<Reservation> GetListWithReservationByWaitApproval(int id)
+        {
+            return reservationDal.GetListWithReservationByWaitApproval(id);
         }
 
         public void Insert(Reservation t)
