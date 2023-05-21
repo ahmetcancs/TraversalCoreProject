@@ -33,3 +33,6 @@ namespace TraversalCoreProject.Models
 		public string ConfirmPassword { get; set; }
 	}
 }
+
+
+
