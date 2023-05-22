@@ -15,3 +15,5 @@ namespace TraversalCoreProject.Areas.User.Models
 
     }
 }
+
+
