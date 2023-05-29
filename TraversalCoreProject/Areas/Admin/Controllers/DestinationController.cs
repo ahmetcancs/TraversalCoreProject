@@ -33,13 +33,13 @@ namespace TraversalCoreProject.Areas.Admin.Controllers
         public IActionResult AddDestination(Destination destination) 
         {
             _destinationService.TAdd(destination);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Destination", new { Area = "Admin" });
         }
         public IActionResult DeleteDestination(int id)
         {
             var values = _destinationService.TGetByID(id);
             _destinationService.TDelete(values);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Destination", new { Area = "Admin" });
         }
 
         [HttpGet]
@@ -52,7 +52,7 @@ namespace TraversalCoreProject.Areas.Admin.Controllers
         public IActionResult UpdateDestination(Destination destination)
         {
             _destinationService.TUpdate(destination);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Destination", new { Area = "Admin" });
         }
 
     }

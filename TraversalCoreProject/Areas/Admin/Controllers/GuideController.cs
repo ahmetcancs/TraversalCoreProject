@@ -28,7 +28,7 @@ namespace TraversalCoreProject.Areas.Admin.Controllers
         public IActionResult AddGuide(Guide guide)
         {
             _guideService.TAdd(guide);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Guide", new { Area = "Admin" });
         }
         [HttpGet]
         public IActionResult EditGuide(int id)
@@ -40,22 +40,15 @@ namespace TraversalCoreProject.Areas.Admin.Controllers
         public IActionResult EditGuide(Guide guide)
         {
             _guideService.TUpdate(guide);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Guide", new { Area = "Admin" });
         }
         public IActionResult ChangeStatus(int id)
         {
             var value = _guideService.TGetByID(id);
-            if (value.Status == true)
-            {
-                value.Status = false;
-                _guideService.TUpdate(value);
-            }
-            else
-            {
-                value.Status = true;
-                _guideService.TUpdate(value);
-            }
-            return RedirectToAction("Index");
+            value.Status = !value.Status;
+            _guideService.TUpdate(value);
+            return RedirectToAction("Index","Guide", new {Area = "Admin"});
         }
+
     }
 }

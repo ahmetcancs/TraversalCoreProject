@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrete.Guide
+@{
+    ViewData["Title"] = "EditGuide";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Rehber Bilgisi Düzenleme</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="GuideID" />
+    <div class="form-group">
+        <label asp-for="Name">İsim</label>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Description">Açıklama</label>
+        <textarea cols="30" rows="5" class="form-control" asp-for="Description"></textarea>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Image">Resim</label>
+        <input type="text" asp-for="Image" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Image">Ana Görsel</label>
+        <input type="text" asp-for="Image" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-outline-primary">Güncelle</button>
+</form>
